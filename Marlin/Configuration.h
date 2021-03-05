@@ -129,7 +129,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_BTT_SKR_V1_3
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_4_TURBO
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
@@ -674,16 +674,16 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#define X_DRIVER_TYPE  TMC2208
-#define Y_DRIVER_TYPE  TMC2208
+#define X_DRIVER_TYPE  TMC2209
+#define Y_DRIVER_TYPE  TMC2209
 #define Z_DRIVER_TYPE  TMC2208
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-//#define Z2_DRIVER_TYPE A4988
+#define Z2_DRIVER_TYPE TMC2208
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 #define E0_DRIVER_TYPE TMC2208
-//#define E1_DRIVER_TYPE A4988
+//#define E1_DRIVER_TYPE TMC2208
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
 //#define E4_DRIVER_TYPE A4988
@@ -1084,7 +1084,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR true
-#define INVERT_Z_DIR true
+#define INVERT_Z_DIR false
 
 // @section extruder
 
@@ -1118,16 +1118,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 295 // Nozzle is at X4 when homed
-#define Y_BED_SIZE 295 // Nozzle is at Y2 when homed
+#define X_BED_SIZE 290 // Nozzle is at X4 when homed
+#define Y_BED_SIZE 280 // Nozzle is at Y2 when homed
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS -20
+#define Y_MIN_POS -15
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE // 15mm Extra space on the right end
 #define Y_MAX_POS Y_BED_SIZE // 4mm Extra space behind the bed
-#define Z_MAX_POS 400
+#define Z_MAX_POS 380
 
 /**
  * Software Endstops
